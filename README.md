@@ -21,6 +21,7 @@ El proyecto se divide en 8 sprints, donde se desarrollan las diferentes funciona
 ---
 
 Este repositorio se actualiza continuamente a medida que avanzamos en el desarrollo. Cualquier sugerencia o colaboración es bienvenida.
+
 Proyecto-Estimacion/
 │
 ├── Documentacion/
