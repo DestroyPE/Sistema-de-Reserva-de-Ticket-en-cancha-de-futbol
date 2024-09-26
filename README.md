@@ -21,3 +21,36 @@ El proyecto se divide en 8 sprints, donde se desarrollan las diferentes funciona
 ---
 
 Este repositorio se actualiza continuamente a medida que avanzamos en el desarrollo. Cualquier sugerencia o colaboración es bienvenida.
+Proyecto-Estimacion/
+│
+├── Documentacion/
+│   ├── Analisis_Requerimientos/
+│   │   ├── requerimientos.md
+│   │   └── backlog_tareas.md
+│   ├── Diseno_Sistema/
+│   │   ├── arquitectura.md
+│   │   ├── wireframes/
+│   │   └── base_datos/
+│   └── Pruebas/
+│       ├── pruebas_unitarias/
+│       ├── pruebas_integracion/
+│       └── UAT/
+│
+├── Backend/
+│   ├── codigo/
+│   ├── apis/
+│   └── base_datos/
+│
+├── Frontend/
+│   ├── codigo/
+│   ├── interfaces_usuarios/
+│   └── conexion_api/
+│
+├── Infraestructura/
+│   ├── servidores/
+│   ├── dominio_ssl/
+│   └── configuracion_produccion/
+│
+└── Mantenimiento_Soporte/
+    ├── manual_usuarios/
+    └── soporte_tecnico/
