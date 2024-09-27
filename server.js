@@ -5,6 +5,9 @@ import router from "./routes/router.js";
 const server = express()
 dotenv.config();
 
+// Configura la carpeta 'public' para servir archivos estáticos
+server.use(express.static('public'));
+
 server.set("view engine", "pug");
 
 server.use("/", router);
