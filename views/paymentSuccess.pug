@@ -1,0 +1,131 @@
+doctype html
+html
+    head
+        title Reservación Exitosa
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        style.
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #E6E6FA;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                color: black;
+            }
+
+            .subtitle {
+                font-size: 18px;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            .image-container {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .image-container img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .details {
+                text-align: center;
+                font-size: 16px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .details .label {
+                font-weight: bold;
+            }
+
+            .time {
+                text-align: center;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .total-section {
+                background-color: #DFFFD6;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 18px;
+                color: black;
+                margin-bottom: 20px;
+            }
+
+            .total-section .total {
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .prohibitions {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #888;
+            }
+
+            .back-btn {
+                display: block;
+                width: 80%;
+                margin: 20px auto;
+                padding: 10px;
+                background-color: transparent;
+                border: 2px solid #4CAF50;
+                color: #4CAF50;
+                font-size: 16px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            .back-btn:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+    body
+        .container
+            .title RESERVACIÓN EXITOSA | DIEGO
+            .subtitle CENTRO DEPORTIVO 1
+
+            .image-container
+                img(src="https://via.placeholder.com/600x300", alt="Centro Deportivo")
+
+            .details
+                .label Descripción
+                p Cancha de 50m2 de gras sintético
+                .label Lugar
+                p Av. Calle Falsa 123, Breña, Lima
+
+            .time
+                .label Horario reservado
+                p 10:00 AM - 11:00 AM
+                p 12:00 AM - 1:00 PM
+
+            .total-section
+                .total Total: 100.00
+                .prohibitions
+                    p Prohibiciones
+                    p No se permite el ingreso de alimentos ni mascotas.
+
+            button.back-btn Regresar

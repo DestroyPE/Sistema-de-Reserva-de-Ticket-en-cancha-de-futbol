@@ -1,0 +1,115 @@
+doctype html
+html
+    head
+        title Métodos de pago
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        style.
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #E6E6FA;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: black;
+            }
+
+            .name {
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: black;
+            }
+
+            .total {
+                font-size: 18px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .payment-options {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .payment-options .option {
+                width: 150px;
+                text-align: center;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                padding: 15px;
+                background-color: white;
+            }
+
+            .payment-options img {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 10px;
+            }
+
+            .payment-options p {
+                font-size: 14px;
+                color: #555;
+            }
+
+            .cancel-btn {
+                display: block;
+                width: 80%;
+                margin: 20px auto;
+                padding: 10px;
+                background-color: transparent;
+                border: 2px solid #4CAF50;
+                color: #4CAF50;
+                font-size: 16px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            .cancel-btn:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+    body
+        .container
+            .title Métodos de pago | CANEPA
+
+            .name Angles Payano, Neil
+            .total Total: 100.00
+
+            .payment-options
+                .option
+                    img(src="https://via.placeholder.com/80", alt="QR Code")
+                    p Código QR
+                    p
+                        img(src="https://via.placeholder.com/40", alt="Yape Logo")
+                        img(src="https://via.placeholder.com/40", alt="Plin Logo")
+                .option
+                    img(src="https://via.placeholder.com/80", alt="Card Payment")
+                    p Pague con tarjetas
+                    p
+                        img(src="https://via.placeholder.com/40", alt="oh! Logo")
+                        img(src="https://via.placeholder.com/40", alt="Tarjeta Ripley Logo")
+
+            button.cancel-btn CANCELAR

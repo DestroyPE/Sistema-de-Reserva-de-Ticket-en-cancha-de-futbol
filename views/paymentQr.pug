@@ -1,0 +1,124 @@
+doctype html
+html
+    head
+        title Métodos de pago
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        style.
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                text-align: center;
+                background-color: #E6E6FA;
+                border-radius: 10px;
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: black;
+            }
+
+            .payment-apps {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .payment-apps img {
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+            }
+
+            .qr-code {
+                margin: 20px 0;
+            }
+
+            .qr-code img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .payment-info {
+                background-color: #DFFFD6;
+                padding: 20px;
+                border-radius: 10px;
+                font-size: 18px;
+                color: black;
+            }
+
+            .payment-info .name {
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .payment-info .total {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .cancel-btn {
+                display: block;
+                width: 80%;
+                margin: 20px auto;
+                padding: 10px;
+                background-color: transparent;
+                border: 2px solid #4CAF50;
+                color: #4CAF50;
+                font-size: 16px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            .cancel-btn:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .note {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #FF5733;
+                text-align: center;
+            }
+
+    body
+        .container
+            .title Métodos de pago | CESAR
+
+            .payment-apps
+                img(src="https://via.placeholder.com/50", alt="Plin")
+                img(src="https://via.placeholder.com/50", alt="Yape")
+                img(src="https://via.placeholder.com/50", alt="BBVA")
+                img(src="https://via.placeholder.com/50", alt="Interbank")
+                img(src="https://via.placeholder.com/50", alt="BCP")
+                img(src="https://via.placeholder.com/50", alt="Wink")
+                img(src="https://via.placeholder.com/50", alt="Scotiabank")
+                img(src="https://via.placeholder.com/50", alt="Caja Municipal")
+
+            .qr-code
+                img(src="https://via.placeholder.com/200", alt="QR Code")
+
+            .payment-info
+                .name Angles Payano, Neil
+                .total Total: 100.00
+
+            button.cancel-btn CANCELAR
+
+            .note Recuerda activar la opción "pagos por internet" desde el App de tu banco ingresando a la opción "configurar tarjetas".
