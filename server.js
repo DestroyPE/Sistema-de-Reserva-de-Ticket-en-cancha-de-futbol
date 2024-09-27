@@ -7,6 +7,8 @@ dotenv.config();
 
 server.set("view engine", "pug");
 
+server.use(express.static("public"));
+
 server.use("/", router);
 
 server.use("/helloworld", (req, res) => {

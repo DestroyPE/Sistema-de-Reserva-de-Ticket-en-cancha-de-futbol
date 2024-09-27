@@ -2,6 +2,10 @@ import express from 'express';
 
 const router = express.Router();
 
+router.get('/yenque', (req, res) => {
+    res.render('home');
+});
+
 router.get('/manco', (req, res) => {
     res.render('centerDetails');
 });
