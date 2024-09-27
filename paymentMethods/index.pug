@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Métodos de Pago
+    link(rel="stylesheet" href="styles.css")
+  body
+    .contenedor
+      h2 Método de pagos
+      p Ingresa tu aplicación
+      img.pagos(src="./images/imagen01.png" alt="Imagen de la aplicación")
+      p y escanea este código QR
+      img.qr(src="./images/codigoQR.jpg" alt="Código QR")
+      img.spinner(src="./images/load.gif" alt="Cargando")
+      
+      .info-pago
+        h2 Angles Payano, Neil
+        p Total: S/100.00
+        button Cancelar
