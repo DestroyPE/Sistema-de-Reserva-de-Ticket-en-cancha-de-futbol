@@ -1,6 +1,6 @@
 # Sistema de Reservación de Tickets para Cancha de Fútbol ⚽️
 
-Este proyecto tiene como objetivo desarrollar una plataforma web para la reservación de tickets en eventos de fútbol. El sistema permitirá a los usuarios visualizar, seleccionar y comprar entradas de forma rápida y eficiente.
+Este proyecto tiene como objetivo desarrollar el backend de una plataforma web para la reservación de tickets en eventos de fútbol. El sistema permitirá a los usuarios visualizar, seleccionar y comprar entradas de forma rápida y eficiente.
 
 ## Funcionalidades Clave:
 - Gestión de usuarios y autenticación.
@@ -11,8 +11,8 @@ Este proyecto tiene como objetivo desarrollar una plataforma web para la reserva
 
 ## Tecnologías Utilizadas:
 - **Backend**: Node.js, Express
-- **Frontend**: HTML, CSS, JavaScript (Framework sugerido: React)
-- **Base de Datos**: MySQL
+- **Frontend**: HTML, CSS, JavaScript (Framework sugerido: React/Angular)
+- **Base de Datos**: NoSQL
 - **Control de versiones**: Git
 
 ## Planificación del Proyecto:
@@ -36,3 +36,5 @@ El proyecto se divide en 8 sprints, donde se desarrollan las diferentes funciona
 ---
 
 Este repositorio se actualiza continuamente a medida que avanzamos en el desarrollo. Cualquier sugerencia o colaboración es bienvenida.
+
+No veo tu yape...
