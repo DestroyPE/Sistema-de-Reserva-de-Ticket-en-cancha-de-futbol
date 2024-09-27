@@ -38,3 +38,37 @@ El proyecto se divide en 8 sprints, donde se desarrollan las diferentes funciona
 Este repositorio se actualiza continuamente a medida que avanzamos en el desarrollo. Cualquier sugerencia o colaboración es bienvenida.
 
 No veo tu yape...
+
+## How to install
+Requisites:
+- **[Node.js v20.17.0](https://nodejs.org/dist/v20.17.0/node-v20.17.0.tar.gz)**
+- **Git v2.43.0**
+
+1. Clone de repository
+
+```bash
+git clone git+https://github.com/DestroyPE/Sistema-de-Reserva-de-Ticket-en-cancha-de-futbol.git
+```
+2. Navigate to proyect root path
+```
+cd Sistema-de-Reserva-de-Ticket-en-cancha-de-futbol
+```
+3. Install dependencies
+```node
+npm install
+```
+
+## How to start the server
+1. Navigate to proyect root path
+```
+cd Sistema-de-Reserva-de-Ticket-en-cancha-de-futbol
+```
+2. Start the project
+```
+npm start
+```
+
+## About authors
+
+* **[Jerry Yenque](https://https://github.com/Jerry-Yenque)** - *Initial work*
+* **Manco Horna**  - *Destroy*

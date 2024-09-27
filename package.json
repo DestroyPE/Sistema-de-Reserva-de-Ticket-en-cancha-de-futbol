@@ -1,0 +1,30 @@
+{
+  "name": "muffin-backend",
+  "version": "1.0.0",
+  "description": "\"A backend for booKing system\"",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DestroyPE/Sistema-de-Reserva-de-Ticket-en-cancha-de-futbol.git"
+  },
+  "keywords": [
+    "120"
+  ],
+  "author": "Jerry Yenque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DestroyPE/Sistema-de-Reserva-de-Ticket-en-cancha-de-futbol/issues"
+  },
+  "homepage": "https://github.com/DestroyPE/Sistema-de-Reserva-de-Ticket-en-cancha-de-futbol#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
