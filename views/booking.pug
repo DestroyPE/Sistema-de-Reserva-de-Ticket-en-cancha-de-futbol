@@ -13,28 +13,40 @@ html
 
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
+                height: 100vh;
+                background-color: #f0f0f0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             .container {
-                max-width: 600px;
-                margin: 20px auto;
-                padding: 20px;
-                background-color: #E6E6FA;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 1px solid #333;
                 border-radius: 10px;
+                background-color: white;
+                overflow: hidden;
             }
 
             .title {
                 text-align: center;
+                background-color: #b19cd9;
+                padding: 20px;
                 color: black;
-                font-size: 24px;
+                font-size: 1.5em;
                 font-weight: bold;
-                margin-bottom: 20px;
+                flex-shrink: 0;
             }
 
             .form-group {
-                margin: 15px 0;
                 text-align: center;
+                background-color: #b19cd9;
+                padding: 10px;
+                flex-shrink: 0;
             }
 
             .form-group label {
@@ -46,19 +58,22 @@ html
 
             .form-group select,
             .form-group input[type="text"] {
-                width: 80%;
-                padding: 10px;
-                font-size: 16px;
-                border: 2px solid #ccc;
+                width: 20%; /* Reducido a un 20% del 100% */
+                padding: 8px; /* Ajustar el padding para hacerlo más pequeño */
+                font-size: 14px; /* Reducir la fuente */
                 border-radius: 5px;
                 margin-top: 5px;
+                border: none;
+                background-color: #eee;
             }
 
             .details {
                 text-align: center;
-                margin: 20px 0;
-                font-size: 18px;
+                margin: 10px 0;
+                font-size: 15px;
                 color: #333;
+                padding: 60px;
+                flex-grow: 3;
             }
 
             .time-selection {
@@ -73,18 +88,17 @@ html
             }
 
             .date {
-                background-color: #DFFFD6;
+                background-color: #ccffcc;
                 padding: 20px;
                 text-align: center;
-                border-radius: 10px;
-                margin: 20px 0;
-                font-size: 18px;
+                font-size: 1.em;
                 color: #333;
+                flex-shrink: 0;
             }
 
             .proceed-btn {
                 display: block;
-                width: 80%;
+                width: 20%;
                 margin: 20px auto;
                 padding: 10px;
                 background-color: transparent;
@@ -93,6 +107,7 @@ html
                 font-size: 16px;
                 border-radius: 20px;
                 cursor: pointer;
+                flex-shrink: 0;
             }
 
             .proceed-btn:hover {
@@ -103,13 +118,14 @@ html
             .total {
                 text-align: center;
                 margin-top: 15px;
-                font-size: 18px;
-                color: #333;
+                font-size: 1.em;
+                font-weight: bold;
+                flex-shrink: 0;
             }
 
     body
         .container
-            .title Centro Deportivo 1 Reserva | NEIL
+            .title Centro Deportivo 1 Reserva 
 
             .form-group
                 label(for="document-type") Formulario de reserva

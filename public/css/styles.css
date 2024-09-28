@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-color: #f0f0f0;*/
+}
+
+.contenedor {
+    width: 60%;
+    text-align: center; /* Centramos todo el contenido dentro del contenedor */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 40px;
+}
+
+img {
+    display: block;
+    margin: 10px auto; /* Centra las imágenes horizontalmente */
+}
+
+.pagos {
+    width: 40%; /* Tamaño de la imagen 1 */
+}
+
+.qr {
+    width: 200px; /* Tamaño de la imagen del código QR */
+    padding-top: 10px;
+}
+
+.spinner {
+    width: 30px; /* Tamaño de la imagen del código QR */
+}
+
+.info-pago {
+    background-color: #c3fab3;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: rgb(216, 226, 216);
+    color: rgb(118, 124, 118);
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button:hover {
+    background-color: lightgray;
+}
