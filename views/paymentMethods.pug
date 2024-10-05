@@ -18,6 +18,7 @@ html
 
       .container {
         max-width: 15000px;
+        height: 100vh;
         margin: 0px auto;
         padding: 0px;
         background-color: #E6E6FA;
@@ -26,14 +27,14 @@ html
       }
 
       .title {
-        font-size: 48px;
+        font-size: 40px;
         font-weight: bold;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         color: black;
       }
 
       .name {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: bold;
         margin-bottom: 20px;
         color: black;
@@ -71,8 +72,8 @@ html
       }
 
       .payment-options img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 90px;
         margin-bottom: 20px;
       }
 
@@ -90,8 +91,8 @@ html
 
       .cancel-btn {
         display: block;
-        width: 60%;
-        margin: 30px auto;
+        width: 40%;
+        margin: -30px auto;
         padding: 20px;
         background-color: transparent;
         border: 3px solid #4CAF50;
@@ -111,7 +112,7 @@ html
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0;
+        /*padding: 0;*/
       }
 
   body
@@ -123,22 +124,24 @@ html
 
       .payment-options
         .option
-          button
-            img(src="/img/qr.jpg" alt="QR Code")
+          a(href="/cesar")
+            button
+              img(src="/img/qr.jpg" alt="QR Code")
           p Código QR
           p
-            button
-              img(src="/img/yape.jfif" alt="Yape Logo")
-            button
-              img(src="/img/plin.png" alt="Plin Logo")
+          button
+            img(src="/img/yape.jfif" alt="Yape Logo")
+          p
+          button
+            img(src="/img/plin.png" alt="Plin Logo")
         .option
           button
             img(src="/img/cardpayment.jfif" alt="Card Payment")
           p Pague con tarjetas
           p
-            button
-              img(src="/img/oh.png" alt="oh! Logo")
-            button
-              img(src="/img/ripley.png" alt="Tarjeta Ripley Logo")
-
+          button
+            img(src="/img/oh.png" alt="oh! Logo")
+          p
+          button
+            img(src="/img/ripley.png" alt="Tarjeta Ripley Logo")
       button.cancel-btn CANCELAR

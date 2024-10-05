@@ -19,7 +19,7 @@ html
             }
 
             .container {
-                max-width: 1400px;
+                max-width: 1200px;
                 margin: 0 auto;
                 padding: 20px;
             }
@@ -37,7 +37,7 @@ html
                 display: grid;
                 grid-template-columns: repeat(2, 1fr); /* Dos columnas */
                 gap: 20px;
-                height: 85vh; /* Limitar la altura total para evitar el scroll */
+                height: 80vh; /* Limitar la altura total para evitar el scroll */
             }
 
             .card {
@@ -58,17 +58,20 @@ html
                 object-fit: cover;
             }
 
+            .card a {
+                margin: auto auto;
+                width: 50%;
+            }
             .card button {
                 background-color: transparent;
                 border: 2px solid #4CAF50;
                 border-radius: 20px;
                 padding: 10px 20px;
-                margin: auto auto;
                 cursor: pointer;
                 font-size: 16px;
                 color: #4CAF50;
                 transition: 0.3s;
-                width: 50%;
+
             }
 
             .card button:hover {
@@ -84,13 +87,21 @@ html
             .grid
                 .card
                     img(src="img/center_1.png")
-                    button Mas Información
+                    a(href="/manco")
+                        button Más Información
+                    //button Mas Información
                 .card
                     img(src="img/center_2.png" alt="Centro Deportivo 2")
-                    button Mas Información
+                    a(href="/manco")
+                        button Más Información
+                    //button Mas Información
                 .card
                     img(src="img/center_3.png" alt="Centro Deportivo 3")
-                    button Mas Información
+                    a(href="/manco")
+                        button Más Información
+                    //button Mas Información
                 .card
                     img(src="img/center_4.png" alt="Centro Deportivo 4")
-                    button Mas Información
+                    a(href="/manco")
+                        button Más Información
+                    //button Mas Información
