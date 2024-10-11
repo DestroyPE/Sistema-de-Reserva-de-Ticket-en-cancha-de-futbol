@@ -13,40 +13,44 @@ html
 
             body {
                 font-family: Arial, sans-serif;
-                height: 100vh;
-                background-color: #f0f0f0;
+                background-color: #C8C8C8;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 100vh;
             }
 
             .container {
-                width: 100vw;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                border: 1px solid #333;
+                width: 90%;
+                max-width: 1600px;
+                height: 90vh; /* Altura total del contenedor principal */
+                margin: auto;
+                background-color: #E6E6FA;
                 border-radius: 10px;
-                background-color: white;
-                overflow: hidden;
+                display: flex;
+                flex-direction: column; /* Dirección de los elementos hijos en columna */
+            }
+
+            .form-section {
+                background-color: #b19cd9; /* Fondo morado */
+                flex: 1; /* Ocupa un espacio proporcional */
+                padding: 20px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                text-align: center;
             }
 
             .title {
                 text-align: center;
-                background-color: #b19cd9;
-                padding: 20px;
                 color: black;
                 font-size: 1.5em;
                 font-weight: bold;
-                flex-shrink: 0;
+                margin-bottom: 10px;
             }
 
             .form-group {
                 text-align: center;
-                background-color: #b19cd9;
-                padding: 10px;
-                flex-shrink: 0;
+                margin-bottom: 10px;
             }
 
             .form-group label {
@@ -58,13 +62,24 @@ html
 
             .form-group select,
             .form-group input[type="text"] {
-                width: 20%; /* Reducido a un 20% del 100% */
-                padding: 8px; /* Ajustar el padding para hacerlo más pequeño */
-                font-size: 14px; /* Reducir la fuente */
+                width: 250px;
+                height:50px;
+                padding: 8px;
+                font-size: 14px;
                 border-radius: 5px;
                 margin-top: 5px;
                 border: none;
                 background-color: #eee;
+            }
+
+            .details-container {
+                background-color: #fff; /* Fondo blanco */
+                flex: 1; /* Ocupa un espacio proporcional */
+                padding: 40px; /* Aumenta el padding para más espacio */
+                text-align: center;
+                display: flex; /* Utiliza Flexbox */
+                flex-direction: column; /* Alinea los elementos en columna */
+                justify-content: space-between; /* Espacio uniforme entre los elementos */
             }
 
             .details {
@@ -72,8 +87,6 @@ html
                 margin: 10px 0;
                 font-size: 15px;
                 color: #333;
-                padding: 60px;
-                flex-grow: 3;
             }
 
             .time-selection {
@@ -81,74 +94,102 @@ html
                 font-size: 16px;
                 margin: 10px 0;
                 color: #555;
+                display: flex; /* Utiliza flexbox para alinear los elementos */
+                flex-direction: column; /* Alinea en columna */
             }
 
             .time-selection span {
-                margin: 0 10px;
+                margin-top: 5px; /* Espacio entre la etiqueta y el texto seleccionado */
             }
 
-            .date {
-                background-color: #ccffcc;
+            .date-container {
+                background-color: #ccffcc; /* Fondo verde */
+                flex: 1; /* Ocupa un espacio proporcional */
                 padding: 20px;
                 text-align: center;
-                font-size: 1rem;
-                color: #333;
-                flex-shrink: 0;
+                display: flex; /* Utiliza Flexbox */
+                flex-direction: column; /* Alinea los elementos en columna */
+                justify-content: space-between; /* Espacio uniforme entre los elementos */
             }
 
             .proceed-btn {
-                display: block;
-                width: 20%;
-                margin: 20px auto;
+                width: 250px;
                 padding: 10px;
-                background-color: transparent;
-                border: 2px solid #4CAF50;
-                color: #4CAF50;
+                margin-top: 15px;
+                background-color: rgb(216, 226, 216);
+                color: rgb(118, 124, 118);
+                border-radius: 20px;
                 font-size: 16px;
                 border-radius: 20px;
                 cursor: pointer;
-                flex-shrink: 0;
             }
 
-            .proceed-btn:hover {
-                background-color: #4CAF50;
-                color: white;
+            .proceed-btn-btn:hover {
+                background-color: rgb(140, 150, 140); /* Even darker on hover */
             }
 
             .total {
                 text-align: center;
-                margin-top: 15px;
+                margin-bottom: 15px;
                 font-size: 1rem;
                 font-weight: bold;
-                flex-shrink: 0;
             }
 
+            .spinner {
+                display: none;
+                border: 4px solid rgba(0, 0, 0, 0.1);
+                border-left-color: #000;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                animation: spin 1s linear infinite;
+                margin: 10px auto;
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .result {
+                margin-top: 10px;
+                font-size: 40px;
+                text-align: center;
+                font-weight: bold;
+            }
     body
         .container
-            .title Centro Deportivo 1 Reserva 
+            .form-section
+                .title Centro Deportivo #{centroId} Reserva  <!-- Asigna el nombre del centro dinámicamente -->
 
-            .form-group
-                label(for="document-type") Formulario de reserva
-                select#document-type
-                    option Tipo de documento
-                    option DNI
-                    option Pasaporte
-                    option Carnet de extranjería
+                .form-group
+                    label(for="document-type") Formulario de reserva
+                    select#document-type
+                        option Tipo de documento
+                        option DNI
+                        option Pasaporte
+                        option Carnet de extranjería
 
-            .form-group
-                label(for="document-number") Número de documento
-                input#document-number(type="text" placeholder="Ingrese su número de documento")
+                .form-group
+                    label(for="document-number") Número de documento
+                    input#document-number(type="text" placeholder="Ingrese su número de documento")
 
-            .details
-                p Cancha de 50m2 de gras sintético
+            .details-container
+                .spinner#loading-spinner
+                .result#dni-result
 
-            .time-selection
-                label Hora
-                span 10:00 AM - 11:00 AM
-                span 12:00 AM - 1:00 PM
+                .details
+                    p Cancha de 50m2 de gras sintético
 
-            .date 27/09/2024
-            a(href="/canepa")
-                button.proceed-btn Proceder al Pago
+                .time-selection
+                    label Hora seleccionada:
+                    span#selected-hours No seleccionada
 
-            .total Total: 100.00
+            .date-container
+                .date
+                    Fecha Fecha seleccionada: 
+                    span#selected-date No seleccionada
+
+                a(href="#" id="proceed") 
+                    button.proceed-btn Proceder al Pago
+
+                .total Total: 0.00
+        script(src="/js/booking.js")

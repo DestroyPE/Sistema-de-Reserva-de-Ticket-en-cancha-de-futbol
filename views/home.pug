@@ -57,7 +57,11 @@ html
                 height: 70%; /* Ajusta la altura de la imagen para evitar que ocupe demasiado espacio */
                 object-fit: cover;
             }
-
+            
+            .card p {
+                margin-top: 10px;
+                
+            }
             .card a {
                 margin: auto auto;
                 width: 50%;
@@ -87,21 +91,25 @@ html
             .grid
                 .card
                     img(src="img/center_1.png")
-                    a(href="/manco")
+                    p Centro Deportivo 1
+                    a(href="/manco?centro=1")
                         button Más Información
                     //button Mas Información
                 .card
                     img(src="img/center_2.png" alt="Centro Deportivo 2")
-                    a(href="/manco")
+                    p Centro Deportivo 2
+                    a(href="/manco?centro=2")
                         button Más Información
                     //button Mas Información
                 .card
                     img(src="img/center_3.png" alt="Centro Deportivo 3")
-                    a(href="/manco")
+                    p Centro Deportivo 3
+                    a(href="/manco?centro=3")
                         button Más Información
                     //button Mas Información
                 .card
                     img(src="img/center_4.png" alt="Centro Deportivo 4")
-                    a(href="/manco")
+                    p Centro Deportivo 4
+                    a(href="/manco?centro=4")
                         button Más Información
                     //button Mas Información

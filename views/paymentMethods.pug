@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Métodos de pago
+    title Método de Pago
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     style.
@@ -10,138 +10,152 @@ html
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-      }
-
-      .container {
-        max-width: 15000px;
-        height: 100vh;
-        margin: 0px auto;
-        padding: 0px;
-        background-color: #E6E6FA;
-        border-radius: 15px;
-        text-align: center;
-      }
-
-      .title {
-        font-size: 40px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: black;
-      }
-
-      .name {
-        font-size: 32px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        color: black;
-      }
-
-      .total {
-        font-size: 32px;
-        color: #333;
-        margin-bottom: 30px;
-      }
-
-      .payment-options {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 40px;
-        margin-bottom: 40px;
+        height: 100vh;
+        background-color: #F5F5F5;
+      }
+      .main-container {
+        width: 90%;
+        max-width: 1600px;
+        height: 90vh; /* Altura total del contenedor principal */
+        margin: auto;
+        background-color: #E6E6FA;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column; /* Dirección de los elementos hijos en columna */
+      }
+      .section-1, .section-2, .section-3 {
+        display: flex;
+        flex-direction: column;      
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
       }
 
-      .payment-options .option {
-        width: 300px;
+      .section-1 {
+          background-color: #b19cd9;
+          border-radius: 20px;
+          justify-content: space-evenly;
+          flex: 0 0 25%;
+      }
+
+      .name-info {
+          font-weight: bold;
+          font-size: 40px;
+          margin-bottom: 10px;
+      }
+
+      .section-2 {
+          background-color: #e8e8e8;
+          justify-content: space-evenly;
+          flex: 0 0 55%;
+      }
+
+      .section-3 {
+          background-color: #ccffcc;
+          border-radius: 20px;
+          justify-content: space-evenly;
+          flex: 0 0 20%;
+      }
+      h2 {
         text-align: center;
-        border: 2px solid #ccc;
-        border-radius: 15px;
-        padding: 30px;
-        background-color: white;
-        transition: border-color 0.3s, box-shadow 0.3s;
-        cursor: pointer;
+        margin-bottom: 10px;
+        color: #333;
       }
 
-      /* Agrega un borde visible y un cambio de color en hover */
-      .payment-options .option:hover {
-        border-color: #4CAF50;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      .payment-options img {
-        width: 100px;
-        height: 90px;
-        margin-bottom: 20px;
-      }
-
-      /* Efecto en las imágenes dentro de los botones */
-      .payment-options button:hover img {
-        border: 2px solid #4CAF50;
-        padding: 5px;
-        border-radius: 10px;
-      }
-
-      .payment-options p {
+      .total{
         font-size: 20px;
-        color: #555;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+      .payment-methods {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .payment-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        padding: 10px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        transition: border-color 0.3s;
+      }
+
+      .horizontal-images {
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+      }
+      
+      .img-1 {
+          height: 200px;
+      }
+
+      .ti{
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      .img-2 {
+          width: 65px;
+          margin: 0 5px;
+      }
+      .payment-container.selected {
+        border-color: black;
       }
 
       .cancel-btn {
-        display: block;
-        width: 40%;
-        margin: -30px auto;
-        padding: 20px;
-        background-color: transparent;
-        border: 3px solid #4CAF50;
-        color: #4CAF50;
-        font-size: 24px;
-        border-radius: 25px;
+        width: 250px;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: rgb(216, 226, 216);
+        color: rgb(118, 124, 118);
+        border-radius: 20px;
+        font-size: 16px;
         cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+        transition: background-color 0.3s;
       }
 
       .cancel-btn:hover {
-        background-color: #4CAF50;
-        color: white;
+          background-color: rgb(140, 150, 140);
       }
-
-      button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        /*padding: 0;*/
-      }
-
   body
-    .container
-      .title Métodos de pago
+    .main-container
+      .section-1
+        h2 Método de Pago
+        p.name-info #{nombre}
+        p.total Total: #{total}
+      
+      .section-2
+        h2 Selecciona tu método de pago
+        .payment-methods
+          .payment-container#method1
+            p.ti Código QR
+            img.img-1(src="/img/codqr.png", alt="Método 1")
+            .horizontal-images
+              img.img-2(src="/img/yape.png", alt="Método 2")
+              img.img-2(src="/img/plin.png", alt="Método 3")
+              img.img-2(src="/img/bimNavLogo.png", alt="Método 4")
+          .payment-container#method2
+            p.ti Paga con tarjetas
+            img.img-1(src="/img/tarjetafac.png", alt="Método 2")
+            .horizontal-images
+              img.img-2(src="/img/oh.png", alt="Método 1")
+              img.img-2(src="/img/ripley.png", alt="Método 1")
+              img.img-2(src="/img/bcp.png", alt="Método 1")
 
-      .name Canepa Zegarra, Gabriel
-      .total Total: 100.00
-
-      .payment-options
-        .option
-          a(href="/cesar")
-            button
-              img(src="/img/qr.jpg" alt="QR Code")
-          p Código QR
-          p
-          button
-            img(src="/img/yape.jfif" alt="Yape Logo")
-          p
-          button
-            img(src="/img/plin.png" alt="Plin Logo")
-        .option
-          button
-            img(src="/img/cardpayment.jfif" alt="Card Payment")
-          p Pague con tarjetas
-          p
-          button
-            img(src="/img/oh.png" alt="oh! Logo")
-          p
-          button
-            img(src="/img/ripley.png" alt="Tarjeta Ripley Logo")
-      button.cancel-btn CANCELAR
+      .section-3
+        button.cancel-btn#cancel-btn Cancelar
+      
+    script(src="/js/paymentMethods.js")

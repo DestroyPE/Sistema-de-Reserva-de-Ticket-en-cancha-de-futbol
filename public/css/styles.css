@@ -68,3 +68,35 @@ button {
 button:hover {
     background-color: lightgray;
 }
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posicionamiento fijo */
+    z-index: 1; /* Asegurarse de que esté encima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+.modal-content {
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    position: relative;
+}
+.close {
+    position: absolute; /* Posición absoluta para el botón de cerrar */
+    top: 10px;
+    right: 15px;
+    cursor: pointer; /* Cambiar cursor */
+    font-size: 20px; /* Tamaño de fuente */
+}
+.check-icon {
+    font-size: 50px; /* Tamaño del icono */
+    color: green; /* Color verde */
+    margin-bottom: 10px; /* Espaciado inferior */
+}

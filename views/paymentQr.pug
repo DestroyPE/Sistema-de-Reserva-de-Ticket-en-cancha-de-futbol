@@ -15,10 +15,16 @@ html(lang="es")
             img.spinner(src="./img/load.gif" alt="Cargando")
 
             .info-pago
-                h2 Angles Payano, Neil
-                p Total: S/100.00
-                button Cancelar
-        script.
-            setTimeout(function () {
-                window.location.href = "/bonifaz"; // Reemplaza '/otra-ruta' por la ruta deseada
-            }, 5000);
+                h2 #{nombre}
+                p Total: S/#{total}
+                button#cancel-btn Cancelar
+           
+            .modal#paymentModal
+                .modal-content
+                    span.close(&times;)
+                    .check-icon ✔️
+                    h2 Pago realizado
+                    p Tu pago se ha procesado correctamente.
+                    button#accept-btn Aceptar
+
+        script(src="/js/paymentQr.js")

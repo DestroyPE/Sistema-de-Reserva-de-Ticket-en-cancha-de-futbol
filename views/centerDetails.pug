@@ -12,38 +12,9 @@ html
                 padding: 0;
                 box-sizing: border-box;
             }
-            
-            .footer {
-                background-color: #606060; /* Color de fondo gris */
-                padding: 20px;
-                text-align: center;
-                border-radius: 10px;
-                /*margin-top: 20px;*/
-            }
-
-            .footer h3 {
-                color: #fff;
-                margin-bottom: 15px;
-            }
-
-            .social-icons {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
-
-            .social-icon {
-                color: white;
-                font-size: 18px;
-                text-decoration: none;
-            }
-
-            .social-icon i {
-                margin-right: 8px;
-            }
 
             body {
-                font-family: Arial, sans-serif;
+                font-family: Inter, sans-serif;
                 background-color: #C8C8C8;
                 display: flex;
                 justify-content: center;
@@ -56,83 +27,152 @@ html
                 max-width: 1600px;
                 height: 90vh;
                 margin: auto;
-                padding: 20px;
-                background-color: #E6E6FA;
+                background-color: #FEF7FF;
                 border-radius: 10px;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                flex-direction: column; /* Para apilar verticalmente los elementos */
+            }
+
+            .title-image-container,
+            .details-container,
+            .dropbuttom-container,
+            .fotter-container {
+                /* Ocupa todo el espacio disponible y sin espacios */
+                flex-grow: 1;
+                flex-shrink: 1;
+                display: flex;
+                flex-direction: column; /* Cambia a disposición vertical dentro de cada contenedor */
+                align-items: center;
+                justify-content: center;
+                margin: 0; /* Sin márgenes */
+                padding: 0; /* Sin padding adicional */
+            }
+
+            .title-image-container {
+                background-color: #AFA1EE;
+                height: 32%;
+                text-align: center;
+                padding-top: 30px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
 
             .title {
-                text-align: center;
                 color: black;
                 font-size: 24px;
                 font-weight: bold;
+                margin-bottom: 10px;
             }
 
-            .image-container {
+            .details-container {
+                background-color: #FEF7FF; /* Color morado */
                 text-align: center;
-                margin-bottom: 15px;
+                padding: 10px;
+            }
+            
+            #textNeg{
+                font-size: 18px;
+                font-weight: bold;
+                padding-bottom: 5px;
+                color: black;
             }
 
-            .image-container img {
-                width: 50%;
-                max-height: 100px;
-                object-fit: contain;
-                border-radius: 10px;
-            }
-
-            .description {
-                margin: 15px 0;
+            .description{
                 text-align: center;
-                font-size: 16px;
+                font-size: 15px;
                 color: #333;
+                padding-bottom: 10px;
             }
 
             .location {
-                margin: 10px 0;
-                font-size: 14px;
+                font-size: 15px;
                 color: #555;
                 text-align: center;
+                padding-bottom: 15px;
             }
 
             .form-group {
-                margin: 15px 0;
                 text-align: center;
             }
 
             .form-group label {
-                font-size: 14px;
-                color: #333;
+                font-size: 18px;
+                color: black;
+                font-weight: bold;
+                margin-bottom: 8px;
+                display: block;
             }
 
-            /* Ajustar elementos para la mitad del ancho y centrarlos */
-            .form-group input[type="date"],
-            .dropdown select,
-            .reserve-btn {
-                width: 50%; /* La mitad del ancho del contenedor */
-                margin: 0 auto; /* Centrarlos horizontalmente */
-                display: block; /* Necesario para centrar con 'margin: 0 auto;' */
+            .form-group input[type="date"] {
+                width: 250px;
+                margin: 0 auto;
+                display: block;
+            }
+            .dropbuttom-container {
+                height: 5%;
+                background: linear-gradient(to bottom, #FEF7FF 50%, #C0FFCA 50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
             }
 
             .dropdown {
+                position: relative;
+                display: inline-block;
                 margin: 15px 0;
                 text-align: center;
             }
 
-            select {
-                padding: 10px;
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 250px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #toggleDropdown {
+                width: 250px;
+                padding: 10px 20px;
                 font-size: 16px;
+                background-color: white;
+                color: black;
+                border: 1px solid #666666;
                 border-radius: 5px;
-                border: 2px solid #ccc;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .dropdown-content input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+            .dropdown-content label {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0;
+                align-items: center;
+                width: 100%;
+            }
+
+            .fotter-container {
+                background-color: #C0FFCA;
+                padding: 15px;
+                text-align: center;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
             }
 
             .info-section {
-                background-color: #DFFFD6;
-                padding: 15px;
-                border-radius: 10px;
-                text-align: center;
+                padding: 20px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
 
             .cost {
@@ -143,75 +183,76 @@ html
             .prohibitions {
                 margin-top: 10px;
                 font-size: 14px;
-                color: #888;
+                color: black;
             }
 
             .reserve-btn {
+                width: 250px;
                 padding: 10px;
                 margin-top: 15px;
-                background-color: transparent;
-                border: 2px solid #4CAF50;
-                color: #4CAF50;
+                background-color: rgb(216, 226, 216);
+                color: rgb(118, 124, 118);
+                border-radius: 20px;
                 font-size: 16px;
                 border-radius: 20px;
                 cursor: pointer;
             }
 
-            a {
-                text-decoration: none; /* Elimina el subrayado para todos los enlaces */
-            }
-
             .reserve-btn:hover {
-                background-color: #4CAF50;
-                color: white;
+                background-color: rgb(140, 150, 140); /* Even darker on hover */
             }
 
             .total {
                 margin-top: 15px;
                 text-align: center;
                 font-size: 16px;
-                text-align: center;
             }
 
     body
         .container
-            .title Centro Deportivo 1 | MANCO
+            // Title and Image Section
+            .title-image-container
+                .title Centro Deportivo 1 | MANCO
+                .image-container
+                    img(src=imageUrl, alt=`Centro Deportivo ${centroId}`)
 
-            .image-container
-                //img(src="https://www.el19digital.com/files/articulos/355821.jpg", alt="Centro Deportivo")
-                img(src="img/center_1.png", alt="Centro Deportivo")
+            // Details Section
+            .details-container
+                .description
+                    p#textNeg Descripcion
+                    p Cancha de 50m2 de gras sintético
+                .location
+                    p#textNeg Lugar
+                    p Av. Calle Falsa 123, Breña, Lima
+                .form-group
+                    label(for="fecha") Fecha
+                    input#fecha(type="date", value="2024-09-27")
 
-            .description
-                p Cancha de 50m2 de gras sintético
+            // Dropdown Section
+            .dropbuttom-container
+                .dropdown
+                    button#toggleDropdown Horarios disponibles
+                    .dropdown-content
+                        label
+                            | 8:00 AM - 9:00 AM
+                            input(type="checkbox" name="horarios" value="8:00 AM - 9:00 AM")
+                        label
+                            | 9:00 AM - 10:00 AM
+                            input(type="checkbox" name="horarios" value="9:00 AM - 10:00 AM")
+                        label
+                            | 10:00 AM - 11:00 AM
+                            input(type="checkbox" name="horarios" value="10:00 AM - 11:00 AM")  
+            input(type="hidden" id="centroId" value=centroId)
 
-            .location
-                p Av. Calle Falsa 123, Breña, Lima
+            // Footer Section
+            .fotter-container
+                .selected-hours-container 
+                    .selected-hours
+                .info-section
+                    .cost Costo de reserva: s/50 por hora
+                    .prohibitions No se permite el ingreso de alimentos ni mascotas.
+                a(href="#" id="reserveBtn")
+                    button.reserve-btn Reservar
+                .total Total: 0
 
-            .form-group
-                label(for="fecha") Fecha
-                input#fecha(type="date", value="2024-09-27")
-
-            .dropdown
-                select
-                    option(selected) Horario disponible
-                    option 8:00 AM - 9:00 AM
-                    option 9:00 AM - 10:00 AM
-                    option 10:00 AM - 11:00 AM
-
-            .info-section
-                .cost Costo de reserva: s/50 por hora
-                .prohibitions No se permite el ingreso de alimentos ni mascotas.
-            a(href="/neil")
-                button.reserve-btn Reservar
-            .total Total: 50
-            h3 SÍGUENOS EN
-            .footer
-                a(href="#" class="social-icon") 
-                    i(class="fab fa-instagram") Instagram
-                a(href="#" class="social-icon") 
-                    i(class="fab fa-facebook") Facebook
-                a(href="#" class="social-icon") 
-                    i(class="fab fa-twitter") Twitter
-                a(href="#" class="social-icon") 
-                    i(class="fab fa-tiktok") TikTok
-            .social-icons
+        script(src="/js/centerDetails.js")

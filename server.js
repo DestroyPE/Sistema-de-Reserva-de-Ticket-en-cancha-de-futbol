@@ -18,5 +18,5 @@ server.use("/helloworld", (req, res) => {
 const PORT = process.env.PORT || 4000;
 
 server.listen(PORT, () => {
-    console.log(`Server start on ${PORT} port.`)
+    console.log(`Server started on ${PORT} port.`)
 });
