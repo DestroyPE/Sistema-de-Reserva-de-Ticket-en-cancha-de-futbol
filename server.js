@@ -1,16 +1,19 @@
 import express from "express";
 import dotenv from "dotenv";
 import router from "./routes/router.js";
+import connectMongoose from "./config/connectMongoose.js";
+import sportCenterRoutes from "./routes/sportCenterRoutes.js";
 
-const server = express()
+const server = express();
+server.use(express.json());
 dotenv.config();
+connectMongoose();
 
 server.set("view engine", "pug");
-
 server.use(express.static("public"));
 
 server.use("/", router);
-
+server.use("/api/sportCenters", sportCenterRoutes);
 server.use("/helloworld", (req, res) => {
     res.send("Muffin Server");
 })

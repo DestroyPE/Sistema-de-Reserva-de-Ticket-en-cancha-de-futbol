@@ -2,9 +2,11 @@ import express from 'express';
 
 const router = express.Router();
 
-router.get('/yenque', (req, res) => {
+router.get('/', (req, res) => {
     res.render('home');
 });
+
+router.get('/', (req, res) => {})
 
 router.get('/manco', (req, res) => {
     res.render('centerDetails');
